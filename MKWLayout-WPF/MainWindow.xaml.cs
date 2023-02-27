@@ -42,7 +42,7 @@ namespace MKWLayout_WPF
             List<Image> images = new List<Image>();
             foreach (Image image in images)
             {
-                if()
+                //if()
             }
         }
 
