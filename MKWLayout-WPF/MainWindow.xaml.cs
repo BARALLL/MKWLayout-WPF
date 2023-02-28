@@ -46,9 +46,6 @@ namespace MKWLayout_WPF
             }
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
-        }
     }
 }

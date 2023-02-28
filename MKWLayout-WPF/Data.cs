@@ -4,25 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace MKWLayout_WPF
 {
     class Data
     {
-        private string imgPath { get; set; }
-        private bool enabled { get; set; }
-        public static List<Field> data = new List<Field>();
+        public string imgPath { get; set; }
+        public bool enabled { get; set; }
+        protected CheckBox checkBox = new CheckBox();
 
-        public Data(string path, List<Field> dataFields) 
+        //public static List<Field> fields = new List<Field>();
+        public static List<int> fieldValues = new List<int>();
+
+        public Data(int nField)
         {
             enabled = true;
-            imgPath = path;
-            data = dataFields;
+            imgPath = "";
+            for (int i = 0; i < nField; i++)
+                fieldValues.Add(0);
         }
 
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            if (checkBox != null && checkBox.IsChecked != null)
+            {
+                enabled = (bool)checkBox.IsChecked;
+            }
+        }
+
+        /*  setField
         public void setField(string nameField, int value)
         {
-            foreach(Field field in data)
+            foreach(Field field in fields)
             {
                 if(field.fieldName == nameField)
                 {
@@ -32,5 +47,6 @@ namespace MKWLayout_WPF
 
             }
         }
+        */
     }
 }
