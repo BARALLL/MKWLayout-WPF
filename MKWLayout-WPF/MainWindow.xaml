@@ -10,16 +10,17 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content = "Save Model" Margin = "126,276,564,129" Click="Button_Click" FontSize="16"/>
-        <Image HorizontalAlignment="Left" Height="300" Margin="430,60,0,0" VerticalAlignment="Top" Width="300" Source="/CampKartigan.bmp"/>
-        <TextBox HorizontalAlignment="Left" Margin="91,320,0,0" TextWrapping="Wrap" Text="New/Save/Train for X Gen/Load Model" VerticalAlignment="Top" Width="223" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Margin="108,92,0,0" TextWrapping="Wrap" Text="Show db: then button add/rm from it" VerticalAlignment="Top" Width="206" TextChanged="TextBox_TextChanged" Height="18"/>
-        <TextBox HorizontalAlignment="Left" Margin="58,374,0,0" TextWrapping="Wrap" Text="Generation:" VerticalAlignment="Top" Width="76" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Margin="108,115,0,0" TextWrapping="Wrap" Text="in db: and new field: add new slider with textInput, example: comp, casual, overvall, jank... each image will then need those info" VerticalAlignment="Top" Width="206" TextChanged="TextBox_TextChanged" Height="86"/>
-        <TextBox HorizontalAlignment="Left" Margin="58,343,0,0" TextWrapping="Wrap" Text="Number of individuals&#xD;&#xA;" VerticalAlignment="Top" Width="136" TextChanged="TextBox_TextChanged" Height="26"/>
-        <TextBox HorizontalAlignment="Left" Margin="211,383,0,0" TextWrapping="Wrap" Text="new should ask number of hidden layer, save and load for a path to model file" VerticalAlignment="Top" Width="223" TextChanged="TextBox_TextChanged"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="78,217,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
-        <Slider HorizontalAlignment="Left" Margin="66,237,0,0" VerticalAlignment="Top" Width="120" ValueChanged="Slider_ValueChanged"/>
+        <Button Content = "Save Model" Margin = "61,297,629,108" Click="Button_Click" FontSize="16"/>
+        <Image  Height="300" Margin="430,60,0,0" VerticalAlignment="Top" Width="300" Source="/CampKartigan.bmp"/>
+        <TextBox HorizontalAlignment="Left" Margin="287,33,0,0" TextWrapping="Wrap" Text="Show db: then button add/rm from it" VerticalAlignment="Top" Width="206" TextChanged="TextBox_TextChanged" Height="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="287,56,0,0" TextWrapping="Wrap" Text="in db: and new field: add new slider with textInput, example: comp, casual, overvall, jank... each image will then need those info. No checkbox 0 =&gt; disable" VerticalAlignment="Top" Width="206" TextChanged="TextBox_TextChanged" Height="86"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="165,91,0,0" VerticalAlignment="Top"/>
+        <Slider HorizontalAlignment="Left" Margin="153,111,0,0" VerticalAlignment="Top" Width="120"/>
         <ScrollBar HorizontalAlignment="Left" Margin="773,44,0,0" VerticalAlignment="Top"/>
+        <Button Content = "Create Model" Margin = "61,261,629,144" Click="Button_Click" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="0,44,0,0" TextWrapping="Wrap" Text="Database" VerticalAlignment="Top" Width="79" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Margin="0,67,0,0" TextWrapping="Wrap" Text="GAN" VerticalAlignment="Top" Width="79" TextChanged="TextBox_TextChanged"/>
+        <Button Content = "Load Model" Margin = "61,331,629,74" Click="Button_Click" FontSize="16"/>
+        <Button Content = "Train Model" Margin = "290,254,400,151" Click="Button_Click" FontSize="16"/>
     </Grid>
 </Window>
