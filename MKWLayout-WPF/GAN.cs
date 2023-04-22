@@ -62,9 +62,11 @@ namespace MKWLayout_WPF
         public void reTrainModel()
         {
             data = context.Data.LoadFromTextFile<ImageData>("data.csv", separatorChar: ',');    //reload data
-            //IDataView transformedNewData = dataPrepPipeline.Transform(newData);
-
+            //model = pipeline.Fit(data, model);        //pipeline-algorithms are not re-trainable in current version of ML.NET
+                                                        //retrain everything?
+            model = pipeline.Fit(data);
         }
+
 
         public void saveModel(String fileName)
         {
@@ -80,12 +82,6 @@ namespace MKWLayout_WPF
 
             if (loadedModel != null) { model = loadedModel as TransformerChain<ColumnConcatenatingTransformer>; }
         }
-
-        public void addImageToDB()
-        {
-
-        }
-
     }
 
     public class ImageData

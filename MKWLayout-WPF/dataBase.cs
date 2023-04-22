@@ -13,5 +13,10 @@ namespace MKWLayout_WPF
         public List<Field> fields = new List<Field>();
 
         //button add img and add field
+
+        public void addImageToDB()
+        {
+
+        }
     }
 }
