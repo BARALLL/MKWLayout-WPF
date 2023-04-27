@@ -4,8 +4,75 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MKWLayout_WPF"
+        xmlns:viewModel="clr-namespace:MKWLayout_WPF.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Border Background="#252525"
+            CornerRadius="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="MLayout"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="20,0, 0, 0"/>
+
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Home" 
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Command="{Binding HomeViewCommand}"/>
+
+                <RadioButton Content="Data Base" 
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding DatabaseViewCommand}"/>
+
+            </StackPanel>
+
+            <TextBox    Width="250"
+                        Height="40"
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                        Grid.Column="1"
+                        Style="{StaticResource ModernTextbox}"/>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
+        </Grid>
+    </Border>
+    
+    <!--
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,4 +90,5 @@
         <Button Content = "Load Model" Margin = "61,331,629,74" Click="Button_Click" FontSize="16"/>
         <Button Content = "Train Model" Margin = "290,254,400,151" Click="Button_Click" FontSize="16"/>
     </Grid>
+    -->
 </Window>
