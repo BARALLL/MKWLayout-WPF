@@ -1,12 +1,16 @@
-## ⚠️ In progress - early development 🛠️
+## ⚠️ Work In Progress - early development 🛠️
 
 c# WPF desktop application using ML.NET GAN to generate racing track heightmap images
 
     Roadmap:
         UI:
           Overall:
-            buttons, labels... should stay consistent even when the window is resized
-
+            ui should stay consistent even when the window is resized
+            
+        UI mostly done - link to actions missing
+        add style to buttons and labels
+        
+        
         Menus:
         - database
             2 columns : vertical panel on the left
@@ -22,6 +26,8 @@ c# WPF desktop application using ML.NET GAN to generate racing track heightmap i
                         image collection on the right
 
                         clicking on an image update value fields on features and show button rm image (will rm this one only)
+                        if the user enters a non-number the borders around the input field turns red
+                        if the feature/image is unused, it turns grey
 
         - Model
             create new / save / load / train model buttons on the middle left
